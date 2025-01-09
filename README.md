@@ -22,3 +22,19 @@ The following requirements must be met to receive full credit on this assignment
 Your solution will be tested against various test cases including edge cases, invalid inputs, and all four arithmetic operations.
 
  -->
+
+Usage:
+
+Run using the function binary_calculator(bin1, bin2, operator), which requires 3 parameters: Two 8-bit numbers (Only 0's and/or 1's) and an operator ('+', '-', '*', or '/').
+
+"Error" error is thrown if:
+* 'operator' is not '+', '-', '*', or '/'
+* 'bin1' or 'bin2' is not 8 characters in length.
+* 'bin1' or 'bin2' consists of anything other than 0's and/or 1's
+
+"Overflow" error is thrown if:
+
+
+
+Code:
+

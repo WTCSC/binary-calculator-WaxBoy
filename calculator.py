@@ -5,8 +5,8 @@ def binary_calculator(bin1, bin2, operator):
         return('Error')
     
     #convert the binary string into a decimal integer
-    dec1 = sum(int(a)*(2 ** abs(i-7)) for i, a in enumerate(bin1))
-    dec2 = sum(int(b)*(2 ** abs(j-7)) for j, b in enumerate(bin2))
+    dec1 = sum(int(a)*(2 ** i) for i, a in enumerate(bin1[::-1])) #changed abs(i-7) and bin1 to i and bin1[::-1] because it makes more intuitive sense
+    dec2 = sum(int(b)*(2 ** j) for j, b in enumerate(bin2[::-1]))
     
     #perform basic operations using 2 decimal numbers
     if operator in '+-*':

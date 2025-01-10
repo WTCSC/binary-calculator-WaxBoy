@@ -1,3 +1,4 @@
+[![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=17658312)
 # Binary Calculator
 
 <!--
@@ -21,3 +22,34 @@ The following requirements must be met to receive full credit on this assignment
 Your solution will be tested against various test cases including edge cases, invalid inputs, and all four arithmetic operations.
 
  -->
+A calculator meant to calculate the sum, difference, product, or quotient of 2 single byte numbers. It is of course limited to a single byte of output with any overflow not taken lightly.
+ 
+## Usage
+ 
+*Run using the function binary_calculator(bin1, bin2, operator), requiring 3 parameters: Two 8-bit numbers (Only 0's and/or 1's) and an operator ('+', '-', '*', or '/').
+
+### Errors:
+
+__"Error"__ error is thrown if:
+* 'operator' is not '+', '-', '*', or '/'
+* 'bin1' or 'bin2' is not 8 characters in length.
+* 'bin1' or 'bin2' consists of anything other than 0's and/or 1's
+
+__"Overflow"__ error is thrown if:
+* Result would exceeds 8 bits (255)
+* Result is less than 0 (Negative numbers cannot be expressed)
+
+__"NaN"__ error is thrown if:
+* Trying to divide by 0 (00000000)
+
+## Code:
+
+Check for "Error"
+
+In lines 8 and 9, the two binary strings are converted into decimal numbers. A for loop looks at each number of the binary string, starting from the back, multiplying the either 1 or 0 by 2 to the power of its index, and summing them together.
+
+The operations are then performed, accounting for "NaN", and flooring divison using '//' rather than a standard '/'.
+
+Checks for overflow.
+
+To convert back to binary, the decimal number is checked to be even or odd using % 2 == 1. If odd, a 1 is appended to the left of the output; else a 0. The number is then divided by 2 and floored, and the process repeats 8 times to get all 8 binary digits. Voila.

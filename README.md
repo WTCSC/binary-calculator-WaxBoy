@@ -22,21 +22,24 @@ The following requirements must be met to receive full credit on this assignment
 Your solution will be tested against various test cases including edge cases, invalid inputs, and all four arithmetic operations.
 
  -->
+A calculator meant to calculate the sum, difference, product, or quotient of 2 single byte numbers. It is of course limited to a single byte of output with any overflow not taken lightly.
  
-Run using the function binary_calculator(bin1, bin2, operator), requiring 3 parameters: Two 8-bit numbers (Only 0's and/or 1's) and an operator ('+', '-', '*', or '/').
+## Usage
+ 
+*Run using the function binary_calculator(bin1, bin2, operator), requiring 3 parameters: Two 8-bit numbers (Only 0's and/or 1's) and an operator ('+', '-', '*', or '/').
 
-## Usage:
+### Errors:
 
-"Error" error is thrown if:
+__"Error"__ error is thrown if:
 * 'operator' is not '+', '-', '*', or '/'
 * 'bin1' or 'bin2' is not 8 characters in length.
 * 'bin1' or 'bin2' consists of anything other than 0's and/or 1's
 
-"Overflow" error is thrown if:
+__"Overflow"__ error is thrown if:
 * Result would exceeds 8 bits (255)
 * Result is less than 0 (Negative numbers cannot be expressed)
 
-"NaN" error is thrown if:
+__"NaN"__ error is thrown if:
 * Trying to divide by 0 (00000000)
 
 ## Code:
